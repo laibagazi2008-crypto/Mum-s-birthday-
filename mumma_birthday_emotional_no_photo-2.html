@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For My Mumma, With All My Love ❤️</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(135deg,#fff4f7,#fffaf2);color:#60414b;font-family:Georgia,serif}
+section{min-height:100vh;padding:55px 20px;display:flex;align-items:center;justify-content:center;text-align:center}
+.card{width:min(700px,100%);background:#ffffffd9;border:1px solid #fff;box-shadow:0 15px 50px #9d53651c;border-radius:32px;padding:34px 25px}
+h1{font-size:clamp(42px,11vw,72px);color:#b84f73;line-height:1.05;margin:15px 0}
+h2{font-size:31px;color:#ae526f}
+p{font-family:Arial,sans-serif;font-size:18px;line-height:1.8}
+.small{font-size:15px;color:#96717b}
+.heart{font-size:65px;animation:beat 1.5s infinite}
+button{margin-top:18px;border:0;border-radius:28px;padding:14px 25px;background:#b84f73;color:white;font-size:17px;box-shadow:0 8px 20px #b84f7333}
+button:active{transform:scale(.97)}
+.note{text-align:left;background:#fff7f8;border-radius:24px;padding:25px;margin-top:20px;font-family:Arial,sans-serif;line-height:1.9;font-size:17px}
+.reason{background:white;border-radius:20px;padding:14px;margin:10px 0;font-family:Arial,sans-serif}
+.hidden{display:none}
+.photo-placeholder{border:2px dashed #e7a7b9;border-radius:24px;padding:35px 15px;color:#a96c7d;margin:20px 0}
+.fall{position:fixed;top:-30px;font-size:23px;animation:fall 5s linear forwards;pointer-events:none;z-index:10}
+@keyframes beat{50%{transform:scale(1.13)}}
+@keyframes fall{to{transform:translateY(110vh) rotate(500deg);opacity:0}}
+</style>
+</head>
+<body>
+
+<section>
+<div class="card">
+<div class="heart">❤️</div>
+<p class="small">A little surprise made with all my love...</p>
+<h1>Happy Birthday,<br>Mumma! 🌷</h1>
+<p>You are not just my mother.<br><b>You are my home, my comfort, and one of the most precious parts of my life.</b></p>
+<button onclick="go('letter');celebrate()">Tap for your surprise ✨</button>
+</div>
+</section>
+
+<section id="letter">
+<div class="card">
+<h2>Dear Mumma, 💗</h2>
+<div class="note">
+There are so many things I want to tell you, but sometimes I don't know how to put them into words.
+
+Thank you for every little thing you do for me — even the things I don't notice immediately. Thank you for worrying about me, caring for me, listening to me, correcting me, supporting me, and loving me even on the days when I am difficult.
+
+You have seen so many versions of me grow up, and through all of them, you have stayed beside me.
+
+I may not say it every day, but I notice your love. I feel it. And I am so grateful for it. 🥹❤️
+
+If I could choose my mother all over again, I would choose you every single time.
+
+<b>Thank you for being my Mumma.</b>
+</div>
+<button onclick="go('reasons')">There's more... 🌸</button>
+</div>
+</section>
+
+<section id="reasons">
+<div class="card">
+<h2>Little Things I Love About You 🎀</h2>
+<div class="reason">🌷 Your care, even when you don't say anything.</div>
+<div class="reason">🤍 The way you always want the best for me.</div>
+<div class="reason">🥹 The comfort of knowing I can come to you.</div>
+<div class="reason">✨ The little things you do that make our home feel like home.</div>
+<div class="reason">💗 The love you give without expecting anything back.</div>
+<div class="reason">🌸 And simply... because you're <b>you</b>.</div>
+<button onclick="go('wish');celebrate()">One last surprise 💕</button>
+</div>
+</section>
+
+<section id="wish">
+<div class="card">
+<div style="font-size:75px">🎂</div>
+<h2>My Birthday Wish For You 🌙</h2>
+<p>
+I hope this new year of your life brings you peaceful mornings, happy moments,
+lots of reasons to smile, and all the love you deserve.
+</p>
+<p>
+I hope you always remember that you are deeply loved — not only today,
+but every single day.
+</p>
+<h1 style="font-size:42px">I Love You, Mumma ❤️</h1>
+<p>More than these words can ever explain.</p>
+<p class="small">Happy Birthday to my favourite person. 🌷</p>
+</div>
+</section>
+
+<script>
+function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
+function celebrate(){
+ const s=['❤️','🌷','🎀','✨','💗','🌸','🥹'];
+ for(let i=0;i<45;i++){
+  let e=document.createElement('div');e.className='fall';
+  e.textContent=s[Math.floor(Math.random()*s.length)];
+  e.style.left=Math.random()*100+'vw';
+  e.style.animationDelay=Math.random()*1.8+'s';
+  document.body.appendChild(e);
+  setTimeout(()=>e.remove(),6000);
+ }
+}
+</script>
+</body>
+</html>
